@@ -1,4 +1,4 @@
-import {Hero} from "./hero";
+import {Hero} from './hero';
 
 describe('Hero', () => {
   it('has an ID and a name', () => {
