@@ -13,6 +13,11 @@ describe('workspace-project App', () => {
     await expect(page.getTitleText()).toEqual('Tour of Heroes');
   });
 
+  it('sets Hero name to Uppercase', async () => {
+    await page.setName('value');
+    await expect(page.getName()).toContain('VALUE');
+  });
+
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser
     const logs = await browser.manage().logs().get(logging.Type.BROWSER);
